@@ -2,8 +2,6 @@
  * require_tree .
  * require_self
  */
-
-
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap");
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -25,7 +23,7 @@ body, html {
 }
 
 #hero-image {
-  background-image: url("money.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5)), url("money.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +32,7 @@ body, html {
 }
 
 #hero-text {
+
   font-size: 40px;
   font-family: Oswald;
   text-align: center;
@@ -41,7 +40,8 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #9de1fe;
+  // color: white;
 }
 
 a {
