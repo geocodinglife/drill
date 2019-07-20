@@ -20,9 +20,9 @@
 							<p><%= link_to item, method: :delete, data: { confirm: "Are you sure?" } do %></p>
 								<i class="fa fa-trash fa-lg"></i>
 							<% end %>
-						</div>	
+						</div>
 					</div>
-				<% else %>	
+				<% else %>
 					<div class="row item">
 						<div class="col-md-8">
 							<h2 class="item-title"><%= item.title %></h2>
@@ -43,8 +43,8 @@
 				<% end %>
 			</div>
 
-		<% end %>	
+		<% end %>
 	</div>
 <% else %>
-	<%= render 'partials/static_landing_page' %>
-<% end %>	
+	<%= render 'static_landing_page' %>
+<% end %>
