@@ -7,5 +7,4 @@ Rails.application.routes.draw do
       patch :complete
     end
   end
-  # root to: 'items#index'
 end

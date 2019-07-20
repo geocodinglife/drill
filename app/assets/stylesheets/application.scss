@@ -12,16 +12,13 @@
  *
  *= require_tree .
  *= require_self
- *= require welcome
- *= require items
  */
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap");
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "toastr";
 
 @import "items";
 @import "welcome";
-
-/* Mixins, variables, etc... */

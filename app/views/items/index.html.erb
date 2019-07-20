@@ -1,12 +1,11 @@
 <!-- Checks to see if a user is signed in, if one is, it will list its checklist. -->
 <!-- If not, it will render the landing page that asks the user to sign up or login. -->
-<% if user_signed_in? %>
 	<div class="col-md-6 col-md-offset-3">
 		<% @items.each do |item| %>
 			<div class="index-wrapper">
 				<% if item.completed? %>
 					<div class="row item">
-						<div class="col-md-8">
+						<div class="col-md-8 soft">
 							<h2 style="opacity: 0.5;" class="item-title"><strike><%= link_to item.title, item %></strike></h2>
 							<p style="opacity: 0.5;" class="item-sub-title item-desc"><%= item.description %></p>
 							<p style="opacity: 0.5;" class="time-created-at item-sub-title">Completed <%= time_ago_in_words(item.completed_at) %> ago</p>
@@ -42,9 +41,5 @@
 					</div>
 				<% end %>
 			</div>
-
 		<% end %>
 	</div>
-<% else %>
-	<%= render 'static_landing_page' %>
-<% end %>
