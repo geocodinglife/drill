@@ -1,18 +1,9 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
+ * require_tree .
+ * require_self
  */
+
+
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap");
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -20,5 +11,91 @@
 @import "font-awesome";
 @import "toastr";
 
-@import "items";
-@import "welcome";
+@mixin nav_link_hover {
+  transition: 0.4s;
+  color: lighten(#222, 30%);
+  text-decoration: none;
+}
+
+/* Universal styles */
+body, html {
+  font-family: "Merriweather", serif;
+  height: 100%;
+  margin: 0;
+}
+
+#hero-image {
+  background-image: url("money.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#hero-text {
+  font-size: 40px;
+  font-family: Oswald;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+a {
+  color: darken(#e7e7e7, 70%);
+}
+
+/* Navbar and navigation styles */
+
+.navbar {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-default {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+
+  .navbar-nav > li > a {
+    color: #222;
+  }
+
+  .navbar-link {
+    color: #222;
+  }
+
+  .navbar-brand {
+    color: #222;
+    letter-spacing: 1.25px;
+  }
+}
+
+/* Item styles */
+
+.item {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 1.5em;
+  .item-title {
+    font-family: "Oswald", sans-serif;
+    margin-top: 0;
+  }
+  .item-desc {
+    font-size: 1em;
+  }
+  .time-ago {
+    color: darken(#e7e7e7, 50%);
+    font-size: 0.85em;
+    letter-spacing: 1.25;
+  }
+  .item-sub-title {
+    margin-bottom: 0;
+  }
+}
+
+.item:nth-child(n + 1) {
+  padding-top: 1.5em;
+}
